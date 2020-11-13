@@ -214,6 +214,12 @@ class CubeMaker extends CuboidMakerTwo {
   constructor(attrsCB) {
     super(attrsCB)
   }
+  volume() {
+    return this.length * this.width * this.height
+  }
+  surfaceArea() {
+    return 6 * (length * length)
+  }
 }
 
 
