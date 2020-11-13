@@ -172,25 +172,35 @@ function CuboidMaker(attrs) {
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
 
-
+  let cuboid = new CuboidMaker({length: 4, width: 5, height: 5})
 
 
 // 🐴🐴🐴 Test your volume and surfaceArea methods by uncommenting the logs below: 🐴🐴🐴
 // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
-// console.log(cuboid.volume()); // 100
-// console.log(cuboid.surfaceArea()); // 130
+console.log(cuboid.volume()); // 100
+console.log(cuboid.surfaceArea()); // 130
  
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-
+  constructor(attrsCMT) {
+    this.length = attrsCMT.length
+    this.width = attrsCMT.width
+    this.height = attrsCMT.height
+  }
+  volume() {
+    return this.length * this.width * this.height
+  }
+  surfaceArea() {
+    return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height))
+  }
 }
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+console.log(cuboidTwo.volume()); // 100
+console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
@@ -198,7 +208,11 @@ class CuboidMakerTwo{
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
   
-
+// class CubeMaker{
+//   constructor(attrsCB) {
+//     super(attrsCB)
+//   }
+// }
 
 
 
