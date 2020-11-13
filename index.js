@@ -97,26 +97,31 @@ const zooAnimals = [
     * The last parameter accepts a callback
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
-  function consume(a, b, cb){
-    return cb(a, b)
-  }
+  // function consume(a, b, cb){
+  //   return cb(a, b)
+  // }
+
+  var consume = (a, b, cb) => cb(a, b)
  
-  
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Create a function named add that returns the sum of two numbers 🦁🦁🦁
-  function add(a, b){
-    return a + b
-  }
+  // function add(a, b){
+  //   return a + b
+  // }
+  var add = (a, b) => a + b
+
 // 🦁🦁🦁 Create a function named multiply that returns the product of two numbers 🦁🦁🦁
-  function multiply(a, b){
-   return a * b
-  }
+  // function multiply(a, b){
+  //  return a * b
+  // }
+  var multiply = (a, b) => a * b
 
  // 🦁🦁🦁 Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!" 🦁🦁🦁
-  function greeting(firstName, lastName){
-   return `Hello ${firstName} ${lastName}, nice to meet you!`
-  }
-  
+  // function greeting(firstName, lastName){
+  //  return `Hello ${firstName} ${lastName}, nice to meet you!`
+  // }
+  var greeting = (firstName, lastName) => `Hello ${firstName} ${lastName}, nice to meet you!`
+
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
   // ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️ ⬇️
   console.log(consume(2, 2, add)); // 4
