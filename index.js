@@ -140,8 +140,10 @@ const zooAnimals = [
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
   Create a constructor function named CuboidMaker that accepts properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(attrs) {
+  this.length = attrs.length
+  this.width = attrs.width
+  this.height = attrs.height
 }
 
 
@@ -149,7 +151,9 @@ function CuboidMaker(/*Your Code Here */){
   Create a method using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-
+  CuboidMaker.prototype.volume = function() {
+    return this.length * this.width * this.height
+  }
 
 
 
